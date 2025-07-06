@@ -7,6 +7,8 @@ body{
   margin: 0 auto;
   background-color:#242424;
   border: 3px ;
+  max-width: 95pc;
+  box-sizing: border-box;
 }
 
 .heading{
@@ -34,4 +36,26 @@ ol li::marker {
   color:#f2f1ed; /* Change to your desired color */
   font-size: 40px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 650px) {
+  body {
+    width: 100%; /* Full width on small screens */
+    padding: 0 10px; /* Small side padding */
+  }
+  
+  .heading {
+    font-size: 12vw; /* Scales with viewport width */
+    height: auto;
+    padding: 20px 0;
+  }
+  
+  .link_color {
+    font-size: 8vw; /* Scales with viewport width */
+    margin-bottom: 5pc;
+  }
+  
+  ol li::marker {
+    font-size: 8vw; /* Scales with viewport width */
+  }
 }
