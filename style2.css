@@ -1,37 +1,66 @@
-html{
-  background-color:#242424;
+html {
+  background-color: #242424;
 }
 
-body{
-  width: 600px;
+body {
+  width: 90%; /* Changed from fixed 600px to percentage */
+  max-width: 600px; /* Maximum width for larger screens */
   margin: 0 auto;
-  background-color:#242424;
-  border: 3px ;
+  background-color: #242424;
+  padding: 20px; /* Added padding for mobile */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
-.heading{
-  text-align:center;
-  color:#d97757;
-  font-size: 60px;
+.heading {
+  text-align: center;
+  color: #d97757;
+  font-size: 2.5rem; /* Changed from 60px to rem */
   text-decoration: underline;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   display: grid;
   justify-content: center;
-  height: 100px;
+  height: auto; /* Changed from fixed 100px */
+  min-height: 100px; /* Minimum height */
   align-items: center;
+  margin: 20px 0; /* Added margin */
 }
 
 .link_color {
   color: white;
   text-decoration: underline;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-bottom: 10pc;
-  font-size: 40px;
+  margin-bottom: 1em; /* Changed from 10pc to em */
+  font-size: 1.5rem; /* Changed from 40px to rem */
   text-align: center;
+  display: block; /* Make links stack vertically */
+  padding: 10px 0; /* Added padding for better touch targets */
+}
+
+ol {
+  padding-left: 20px; /* Added padding for list */
+}
+
+ol li {
+  margin-bottom: 1em; /* Added spacing between list items */
 }
 
 ol li::marker {
-  color:#f2f1ed; /* Change to your desired color */
-  font-size: 40px;
+  color: #f2f1ed;
+  font-size: 1.5rem; /* Changed from 40px to rem */
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 2rem; /* Smaller font on mobile */
+  }
+  
+  .link_color {
+    font-size: 1.2rem; /* Smaller font on mobile */
+  }
+  
+  ol li::marker {
+    font-size: 1.2rem; /* Smaller marker on mobile */
+  }
 }
